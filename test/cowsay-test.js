@@ -1,6 +1,7 @@
 'use strict';
 
 require('angular-mocks');
+const angular = require('angular');
 const expect = require('chai').expect;
 const cowsayBrowser = require('cowsay-browser');
 
@@ -21,7 +22,7 @@ describe('testing cowsay component\'s controller', function() {
 
   describe('testing initial state', () => {
     it('should initialize methods and properties', done => {
-      expect(this.cowsayCtrl.title).to.equal('Yay cows');
+      expect(this.cowsayCtrl.title).to.equal('cow creator.');
       expect(this.cowsayCtrl.userInput).to.equal('');
       expect(this.cowsayCtrl.history).to.be.instanceof(Array);
       expect(this.cowsayCtrl.currentCow).to.be.equal('');
@@ -44,6 +45,15 @@ describe('testing cowsay component\'s controller', function() {
       this.cowsayCtrl.userInput = 'MOOVE Over';
       let result = this.cowsayCtrl.getCow(this.cowsayCtrl.userInput);
       expect(result).to.equal(cowsayBrowser.say({text: 'MOOVE Over'}));
+      done();
+    });
+  });
+
+  describe('testing saveCow', () => {
+    it('should return a cow that says HEEEEYYY', done => {
+      this.cowsayCtrl.userInput = 'HEEEEYYY';
+      this.cowsayCtrl.saveCow();
+      expect(this.cowsayCtrl.currentCow).to.equal(cowsayBrowser({text:'HEEEEYYY'}));
       done();
     });
   });

@@ -12,6 +12,8 @@ demoApp.component('cowsay', {
   controller: [function(){
     this.$onInit = function(){
       this.title = 'cow creator.';
+      this.subtitle = 'make it, view it, and undo it!';
+      this.cowfile = 'Select a cowfile';
       this.userInput = '';
       this.history = [];
       this.currentCow = '';
