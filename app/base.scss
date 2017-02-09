@@ -1,0 +1,35 @@
+
+$duncans-color: #fa7afa;
+
+body {
+  background-color: $duncans-color;
+  width:100%;
+}
+
+.box {
+  border: 1px solid black;
+  padding:1.5em;
+  width:20%;
+}
+
+.navv {
+  display: inline-block;
+  width: 80%;
+  margin-bottom: 1.5em;
+}
+.navv h2 {
+  display: inline;
+  padding: 1.5em;
+  margin:0;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  display: inline;
+  padding: 1.5em;
+  float: right;
+
+}
