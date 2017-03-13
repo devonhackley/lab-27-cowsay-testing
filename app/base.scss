@@ -2,7 +2,6 @@
 $brand-primary: #A784B2;
 $brand-secondary: #F5D6FF;
 
-$brand-active:;
 
 $padding: 0.7em;
 
@@ -16,7 +15,7 @@ $padding: 0.7em;
   font-weight: normal;
   line-height: 1.5em;
   text-decoration: none;
-  color: black;
+  color: $brand-primary;
   &:focus {
     outline:0;
   }
@@ -45,7 +44,7 @@ main {
 }
 
 .navv {
-  background-color: $black;
+  background-color: $brand-secondary;
   opacity: 0.8em;
   display: inline-block;
   width: 80%;
